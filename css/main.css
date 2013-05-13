@@ -160,6 +160,7 @@ nav a:hover {
 @font-face{font-family:"ProximaNova-Regular";src:url("fonts/ProximaNova-Regular.otf") format('opentype')}
 @font-face{font-family:"ProximaNova-Bold";src:url("fonts/ProximaNova-Bold.otf") format('opentype')}
 @font-face{font-family:"ProximaNova-Semibold";src:url("fonts/ProximaNova-Semibold.otf") format('opentype')}
+@font-face{font-family:"ProximaNova-Light";src:url("fonts/ProximaNova-Light.otf") format('opentype')}
 
 .uppercase {
     text-transform: uppercase;
@@ -185,12 +186,15 @@ nav a:hover {
 .logo-container p {
     color: white;
     font-size: 30pt;
-    font-family: "ProximaNova-Bold"
+    font-family: "ProximaNova-Semibold", Helvetica, Arial, sans-serif;
+    line-height: 36pt;
+    margin-top: 0.5em;
 }
 
 .features {
     width: 80%;
     margin: 0 auto 3em;
+    text-align: center;
 }
 
 .features > div {
@@ -198,7 +202,8 @@ nav a:hover {
     display: inline-block;
     vertical-align: top;
     margin-left: 3em;
-    margin-bottom: 2em
+    margin-bottom: 2em;
+    text-align: left;
 }
 
 .features > div:last-child {
@@ -219,21 +224,29 @@ nav a:hover {
 .coming_soon {
     padding-top: 0.75em;
     font-size: 11pt;
-    font-family: "ProximaNova-Regular";
+    font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
 }
 
 .app_store {
     font-size: 25pt;
-    font-family: "ProximaNova-Bold";
+    font-family: "ProximaNova-Semibold", Helvetica, Arial, sans-serif;
 }
 
 .twitter {
     padding-top: 1em;
-    font-family: "ProximaNova-Regular";
+    font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
     font-size: 15pt;
     letter-spacing: 1px;
     line-height: 18pt;
+}
+
+.features > .twitter p {
+    margin-top: -0.25em;
+}
+
+.twitter a {
+    text-decoration: none;
 }
 
 .footer-container {
@@ -269,91 +282,9 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 480px) {
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-
-    .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
+@media only screen and (max-width: 480px) {
+    .logo-container {
+        width: 90%;
     }
 }
 
