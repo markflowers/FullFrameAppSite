@@ -274,7 +274,7 @@ nav a:hover {
     .features {
         text-align: center;
         margin-left: 0;
-        width: inherit;
+        width: 100%;
     }
 
     .features > div {
